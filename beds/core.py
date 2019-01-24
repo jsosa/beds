@@ -33,7 +33,7 @@ def beds(widthtif, bnkfixtif, runoffcsv, date1, date2, bedtif, lisfloodfp):
     demtif = outfolder + 'dem1d.tif'
     wdt = gu.get_data(widthtif)
     geo = gu.get_geo(widthtif)
-    dem = np.where(wdt<0,10000,0)
+    dem = np.where(wdt>0,10000,0)
     gu.write_raster(dem,demtif,geo,'Int16',0)
 
     # Convert input files to ASCII
