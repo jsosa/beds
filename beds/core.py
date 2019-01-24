@@ -22,7 +22,7 @@ def beds(widthtif, bnkfixtif, runoffcsv, date1, date2, bedtif, lisfloodfp):
     # Create a temp temporal work folder
     outfolder = os.path.dirname(bedtif) + '/beds-temp/'
     try:
-        os.mkdir(outfolder + 'lfp/nc/')
+        os.makedirs(outfolder + 'lfp/nc/')
     except FileExistsError:
         pass
 
