@@ -76,7 +76,7 @@ def beds(widthtif, bnkfixtif, runoffcsv, date1, date2, bedtif, lisfloodfp):
               t=t)
 
     # Run simulation
-    call([lisfloodfp, '-v', 'lfp.par'], cwd='./beds-temp')
+    call([lisfloodfp, '-v', 'lfp.par'], cwd=outfolder)
 
     # Write netCDFs for WATER DEPTHS
     myfiles = sorted(glob(outfolder + '/lfp/*.wd'))
